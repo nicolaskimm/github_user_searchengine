@@ -22,7 +22,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="search">
                 <form onSubmit={event => this.onSubmit(event)}>
                     <label htmlFor="searchText">Search by user name</label>
                     <input
@@ -44,7 +44,7 @@ class UsersList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='userList'>
                 {this.users}
             </div>
         );
@@ -54,7 +54,7 @@ class UsersList extends React.Component {
 class User extends React.Component {
     render() {
         return (
-            <div>
+            <div className="userList_user">
                 <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}} />
                 <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
             </div>
